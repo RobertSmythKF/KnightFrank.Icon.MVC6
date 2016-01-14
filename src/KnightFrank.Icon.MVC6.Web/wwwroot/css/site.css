@@ -1,0 +1,22 @@
+﻿body {
+  font-family: Arial; }
+
+div.row {
+  width: 100%;
+  max-width: none; }
+
+div.main {
+  padding: 20px; }
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #333333;
+  color: #FFFFFF; }
+  #footer p {
+    padding: 0;
+    margin: 0; }
+

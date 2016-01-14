@@ -2,6 +2,45 @@
     ViewBag.Title = "Index";
 }
 
-<h1>Index Page</h1>
+<div ng-app="instructionsApp" ng-controller="instructionsController as vm" class="row">
 
-<p>This is the body of the index page.</p>
+    <div class="large-12 columns">
+
+        <h1>Instructions List</h1>
+
+        <p>This is a list of instructions.</p>
+
+        <table>
+            <tbody>
+            <tr>
+                <td>Instruction Title</td>
+                <td>Address 1</td>
+                <td>Postcode</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr ng-repeat="i in vm.instructions">
+                <td>{{i.InstructionTitle}}</td>
+                <td>{{i.Address1}}</td>
+                <td>{{i.Postcode}}</td>
+                <td><button ng-click="vm.editInstruction(i.Id)">Edit</button></td>
+                <td><button ng-click="vm.deleteInstruction(i.Id)">Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="large-12 columns">
+        <button ng-click="vm.createInstruction()">Create New Instruction</button>
+    </div>
+
+</div>
+
+@section scripts{
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="/js/instructionsApp.js"></script>
+    <script src="/js/controllers/instructionsController.js"></script>
+}

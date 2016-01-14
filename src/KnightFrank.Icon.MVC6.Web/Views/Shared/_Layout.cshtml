@@ -4,10 +4,55 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.css">
+    <link rel="stylesheet" href="/css/site.css">
+
 </head>
 <body>
-    <div>
+
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1>
+                    <a href="#">Knight Frank MVC</a>
+                </h1>
+            </li>
+            <!-- Collapsible Button on small screens: remove the .menu-icon class to get rid of icon.
+            Remove the "Menu" text if you only want to show the icon -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <ul class="left">
+                <li class="active"><a href="#">Instructions</a></li>
+                <li><a href="#">Target Properties</a></li>
+                <li><a href="#">Referrals</a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <div class="main">
+
         @RenderBody()
+
     </div>
+
+    <div id="footer">
+        <div class="large-12 columns">
+            <p>&copy; Knight Frank LLP</p>
+        </div>
+    </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+    @RenderSection("scripts", false)
+
+    <script>
+        $(document).ready(function() {
+            $(document).foundation();
+        })
+    </script>
+
 </body>
 </html>
