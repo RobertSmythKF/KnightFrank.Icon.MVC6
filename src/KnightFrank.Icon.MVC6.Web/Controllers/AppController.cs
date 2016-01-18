@@ -9,6 +9,8 @@ namespace KnightFrank.Icon.MVC6.Web.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+			// superfluous code
+
             return View();
         }
     }
