@@ -11,5 +11,7 @@ namespace KnightFrank.Icon.MVC6.Web.Controllers
         {
             return View();
         }
+
+		// test comment
     }
 }
