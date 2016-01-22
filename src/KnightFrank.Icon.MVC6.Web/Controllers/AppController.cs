@@ -6,6 +6,9 @@ namespace KnightFrank.Icon.MVC6.Web.Controllers
 {
     public class AppController : Controller
     {
+        // This change will fix everything...
+
+
         // GET: /<controller>/
         public IActionResult Index()
         {
